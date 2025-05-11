@@ -2,7 +2,7 @@ package com.github.mybank.domain.validate.cpf;
 
 class CPFCalculateDigits {
 
-    private static int validateFirstDigit(String cpf){
+    private static int validateFirstDigit(String cpf) {
         int sum = 0;
 
         for (int i = 0; i < 9; i++) {
@@ -13,7 +13,8 @@ class CPFCalculateDigits {
 
         return (rest < 2) ? 0 : 11 - rest;
     }
-    private static int validateSecondDigit(String cpf){
+
+    private static int validateSecondDigit(String cpf) {
         int sum = 0;
 
         for (int i = 0; i < 10; i++) {
@@ -25,13 +26,13 @@ class CPFCalculateDigits {
         return (rest < 2) ? 0 : 11 - rest;
     }
 
-    public static void validateDigits(String cpf){
+    public static void validateDigits(String cpf) {
 
         int first_validator_digit = validateFirstDigit(cpf);
         int second_validator_digit = validateSecondDigit(cpf);
 
-        if(Character.getNumericValue(cpf.charAt(9)) != first_validator_digit
-                && (Character.getNumericValue(cpf.charAt(10)) != second_validator_digit)){
+        if (Character.getNumericValue(cpf.charAt(9)) != first_validator_digit
+                && (Character.getNumericValue(cpf.charAt(10)) != second_validator_digit)) {
             throw new IllegalArgumentException("[ERRO] CPF inválido.");
         }
     }

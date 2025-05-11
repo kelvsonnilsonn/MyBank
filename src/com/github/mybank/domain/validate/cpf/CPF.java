@@ -1,6 +1,6 @@
 package com.github.mybank.domain.validate.cpf;
 
-public record CPF(String cpf) {  // tell, don't ask
+public record CPF(String cpf) {
     public CPF {
         validate(cpf);
     }

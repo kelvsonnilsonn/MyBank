@@ -1,15 +1,18 @@
+import com.github.mybank.domain.Corrente;
+
+import java.math.BigDecimal;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Corrente contaCorrente = new Corrente(4L, 11);
+        Corrente contaCorrente2 = new Corrente(5L, 12);
+        contaCorrente.setBalance(BigDecimal.valueOf(100));
+        System.out.println(contaCorrente);
+        System.out.println(contaCorrente2);
+        contaCorrente.transfer(BigDecimal.TEN, contaCorrente2);
+        System.out.println(contaCorrente);
+        System.out.println(contaCorrente2);
     }
 }

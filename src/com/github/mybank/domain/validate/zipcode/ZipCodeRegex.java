@@ -1,6 +1,6 @@
 package com.github.mybank.domain.validate.zipcode;
 
-public class ZipCodeRegex {
+class ZipCodeRegex {
 
     private static final String ZIPCODE_REGEX = "^\\d{5}-?\\d{3}$";
 

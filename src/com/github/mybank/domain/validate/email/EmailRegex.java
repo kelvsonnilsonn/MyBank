@@ -27,6 +27,8 @@ class EmailRegex {
 
     // $ -> Indica o fim da string.
 
-    public static String getEmailRegex() { return EMAIL_REGEX; }
+    public static String getEmailRegex() {
+        return EMAIL_REGEX;
+    }
 
 }

@@ -8,9 +8,9 @@ public class Email {
     private static final Pattern pattern = Pattern.compile(EmailRegex.getEmailRegex());
 
     private void validate(String email){
-        Objects.requireNonNull(email, "[ERRO] E-mail não deve ser null.");
+        Objects.requireNonNull(email, "O e-mail não deve ser nulo.");
         if(!pattern.matcher(email).matches())
-            throw new IllegalArgumentException("[ERRO] O e-mail inserido não é válido.");
+            throw new IllegalArgumentException("O e-mail inserido não é válido.");
     }
 
     private String email;

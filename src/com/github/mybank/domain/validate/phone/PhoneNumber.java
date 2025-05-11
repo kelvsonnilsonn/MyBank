@@ -9,9 +9,9 @@ public class PhoneNumber {
     private static final Pattern PHONE_PATTERN = Pattern.compile(PhoneNumberRegex.getPhoneNumberRegex());
 
     public void validate(String phoneNumber) {
-        Objects.requireNonNull(phoneNumber, "[ERROR] phone number cannot be null.");
+        Objects.requireNonNull(phoneNumber, "O número de telefone não pode ser nulo.");
         if(!PHONE_PATTERN.matcher(phoneNumber).matches())
-            throw new IllegalArgumentException("[ERROR] Invalid phone number");
+            throw new IllegalArgumentException("O número de telefone é invalido");
     }
 
     private String phoneNumber;
